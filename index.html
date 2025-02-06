@@ -5,16 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Actividades Clases de Física y Matemáticas</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos para el encabezado */
+    .header-container {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+    .logo img {
+      width: 80px; /* Ajusta el tamaño de la insignia según tus necesidades */
+      height: auto;
+      margin-right: 20px;
+    }
+    .institute {
+      font-family: 'Arial', sans-serif; /* Puedes cambiar la tipografía si lo deseas */
+      font-size: 24px; /* Tamaño del texto */
+      line-height: 1.2;
+      color: #000;
+    }
+    .institute p {
+      margin: 0; /* Para que los textos queden bien alineados en líneas separadas */
+    }
+  </style>
 </head>
 <body>
   <!-- Header con insignia y nombre del instituto -->
   <header>
     <div class="header-container">
-      <!-- Insignia: reemplaza 'insignia.png' por la ruta correcta -->
+      <!-- Insignia: la imagen se encuentra en la carpeta "imagenes" -->
       <div class="logo">
-        <img src="insignia.png" alt="Insignia del Instituto">
+        <img src="imagenes/insignia.png" alt="Insignia del Instituto">
       </div>
-      <!-- Nombre del instituto, en la esquina superior derecha -->
+      <!-- Nombre del instituto en dos líneas: "Instituto Regional" y "Federico Errazuriz" -->
       <div class="institute">
         <p>Instituto Regional</p>
         <p>Federico Errazuriz</p>
@@ -22,10 +44,8 @@
     </div>
   </header>
 
-  <!-- Título principal centrado y en negrita, debajo del header -->
+  <!-- Título principal y resto del contenido -->
   <h1 class="main-title">Actividades Clases de Física y Matemáticas</h1>
-
-  <!-- Resto del contenido: lista de guías -->
   <div class="pdf-container">
     <h2>Lista de Guías</h2>
     <ul>
