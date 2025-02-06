@@ -43,9 +43,14 @@
       border: 1px solid #000;
       border-radius: 5px;
       font-size: 18px;
+      display: flex;
+      align-items: center;
     }
     .nav-bar a:hover {
       background-color: #ddd;
+    }
+    .nav-bar a.home-icon {
+      font-size: 24px; /* Tamaño del ícono de casa */
     }
 
     /* Estilos para las secciones */
@@ -78,12 +83,17 @@
   <!-- Título principal y barra de opciones -->
   <h1 class="main-title">Actividades Clases de Física y Matemáticas</h1>
   <div class="nav-bar">
+    <a href="#home" class="home-icon">🏠</a> <!-- Ícono de casa -->
     <a href="#sobre-mi">Sobre Mi</a>
     <a href="#guias">Guias</a>
     <a href="#pruebas">Pruebas de Unidad</a>
   </div>
 
   <!-- Secciones -->
+  <div id="home" class="section active">
+    <!-- Home: Por el momento está en blanco -->
+  </div>
+
   <div id="sobre-mi" class="section">
     <h2>Sobre Mi</h2>
     <p>Información sobre el profesor o la institución.</p>
@@ -124,8 +134,8 @@
       });
     });
 
-    // Mostrar la sección de Guias por defecto
-    document.querySelector('#guias').classList.add('active');
+    // Mostrar la sección de Home por defecto
+    document.querySelector('#home').classList.add('active');
   </script>
 </body>
 </html>
