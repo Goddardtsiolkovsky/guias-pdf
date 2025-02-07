@@ -23,6 +23,7 @@
       <div class="header-info">
         <p>Santa Cruz</p>
         <p id="fecha-actual"></p>
+        <p id="hora-actual"></p>
       </div>
     </div>
   </header>
@@ -33,20 +34,32 @@
   <nav class="nav-bar">
     <a href="#home" class="home-icon">🏠</a>
     <a href="#sobre-mi">Sobre Mi</a>
-    <a href="#guias">Guías</a>
-    <a href="#pruebas">Pruebas de Unidad</a>
+    <a href="#matematicas">Material Matemáticas</a>
+    <a href="#fisica">Material Física</a>
   </nav>
 
   <!-- Secciones -->
-  <section id="home" class="section active"></section>
+  <section id="home" class="section active">
+    <h2>Home</h2>
+    <p>Bienvenido a la página de actividades de Física y Matemáticas.</p>
+    <p><a href="#sobre-mi">Sobre Mi</a></p>
+    <p><a href="#matematicas">Material Matemáticas</a></p>
+    <p><a href="#fisica">Material Física</a></p>
+  </section>
 
   <section id="sobre-mi" class="section">
     <h2>Sobre Mi</h2>
     <p>Información sobre el profesor o la institución.</p>
   </section>
 
-  <section id="guias" class="section">
-    <h2>Guías</h2>
+  <section id="matematicas" class="section">
+    <h2>Material Matemáticas</h2>
+    <p><a href="#matematicas-guias">Guías</a></p>
+    <p><a href="#matematicas-pruebas">Pruebas de Unidad</a></p>
+  </section>
+
+  <section id="matematicas-guias" class="section">
+    <h2>Guías de Matemáticas</h2>
     <div class="pdf-container">
       <ul>
         <li>
@@ -63,9 +76,38 @@
     </div>
   </section>
 
-  <section id="pruebas" class="section">
-    <h2>Pruebas de Unidad</h2>
-    <p>Aquí se mostrarán las pruebas de unidad.</p>
+  <section id="matematicas-pruebas" class="section">
+    <h2>Pruebas de Unidad de Matemáticas</h2>
+    <p>Aquí se mostrarán las pruebas de unidad de Matemáticas.</p>
+  </section>
+
+  <section id="fisica" class="section">
+    <h2>Material Física</h2>
+    <p><a href="#fisica-guias">Guías</a></p>
+    <p><a href="#fisica-pruebas">Pruebas de Unidad</a></p>
+  </section>
+
+  <section id="fisica-guias" class="section">
+    <h2>Guías de Física</h2>
+    <div class="pdf-container">
+      <ul>
+        <li>
+          <a href="pdfs/guia1.pdf" target="_blank" download>📥 Descargar Guía 1</a>
+          <br>
+          <embed src="pdfs/guia1.pdf" type="application/pdf" width="600" height="400">
+        </li>
+        <li>
+          <a href="pdfs/guia2.pdf" target="_blank" download>📥 Descargar Guía 2</a>
+          <br>
+          <embed src="pdfs/guia2.pdf" type="application/pdf" width="600" height="400">
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="fisica-pruebas" class="section">
+    <h2>Pruebas de Unidad de Física</h2>
+    <p>Aquí se mostrarán las pruebas de unidad de Física.</p>
   </section>
 
   <script src="script.js"></script>
