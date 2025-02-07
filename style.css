@@ -1,23 +1,88 @@
-document.addEventListener("DOMContentLoaded", function () {
-    function actualizarFechaHora() {
-      let fecha = new Date();
-      let opcionesFecha = { year: 'numeric', month: 'long', day: 'numeric' };
-      let opcionesHora = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+/* Estilos Globales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
   
-      document.getElementById("fecha-hora").textContent = ` ${fecha.toLocaleDateString('es-ES', opcionesFecha)}`;
-      document.getElementById("hora-actual").textContent = fecha.toLocaleTimeString('es-ES', opcionesHora);
-    }
+  /* Estilos del Encabezado */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid black;
+  }
   
-    setInterval(actualizarFechaHora, 1000);
-    actualizarFechaHora();
+  .logo img {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+  }
   
-    // Manejo de navegación
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
-        document.querySelector(this.getAttribute('href')).classList.add('active');
-      });
-    });
-  });
+  .institute {
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
   
+  .header-info {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Estilos de la Barra de Navegación */
+  .nav-bar {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .nav-bar a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-bar a:hover {
+    background-color: #ddd;
+  }
+  
+  .nav-bar a.home-icon {
+    font-size: 24px;
+  }
+  
+  /* Estilos de las Secciones */
+  .section {
+    display: none;
+    padding: 20px;
+  }
+  
+  .section.active {
+    display: block;
+  }
+  
+  /* Contenedor de PDFs */
+  .pdf-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .pdf-container li {
+    margin-bottom: 20px;
+  }
