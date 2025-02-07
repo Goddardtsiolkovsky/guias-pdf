@@ -21,20 +21,20 @@
     margin-right: 15px;
   }
   
-  /* Texto del Instituto alineado a la izquierda con separación de 1.15 */
+  /* Texto del Instituto alineado a la izquierda con separación de línea 1.15 */
   .institute {
     font-size: 20px;
     font-weight: bold;
-    line-height: 1.15;  /* Ajuste de separación */
     color: #000;
+    line-height: 1.15; /* Separación de línea ajustada */
   }
   
-  /* Información a la derecha (Santa Cruz y fecha) con separación de 1.15 */
+  /* Información a la derecha (Santa Cruz y fecha) con separación de línea 1.15 */
   .header-info {
     text-align: right;
     font-size: 20px;
     font-weight: bold;
-    line-height: 1.15;  /* Ajuste de separación */
     color: #000;
+    line-height: 1.15; /* Separación de línea ajustada */
   }
   
