@@ -13,171 +13,53 @@
       padding: 10px;
     }
     .logo img {
-      width: 80px; /* Ajusta el tamaño de la insignia según tus necesidades */
+      width: 80px;
       height: auto;
       margin-right: 20px;
     }
-    .institute {
-      font-family: 'Arial', sans-serif; /* Puedes cambiar la tipografía si lo deseas */
-      font-size: 24px; /* Tamaño del texto */
+    .institute, .header-info {
+      font-family: 'Arial', sans-serif;
+      font-size: 24px; /* Mismo tamaño de texto para estética */
       line-height: 1.2;
       color: #000;
     }
-    .institute p {
-      margin: 0; /* Para que los textos queden bien alineados en líneas separadas */
+    .institute p, .header-info p {
+      margin: 0;
     }
-
-    /* Estilos para el cuadro de información en el encabezado */
     .header-info {
-      margin-left: auto; /* Mueve el cuadro de texto a la derecha */
+      margin-left: auto;
       text-align: right;
-      font-family: 'Arial', sans-serif;
-      font-size: 16px; /* Tamaño de la tipografía proporcional */
-      color: #000;
-      padding: 5px;
-      line-height: 1; /* Reduce el espacio entre líneas */
-      background-color: transparent; /* Hace que el fondo sea transparente */
-    }
-
-    /* Estilos para la barra de opciones */
-    .nav-bar {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-    .nav-bar a {
-      text-decoration: none;
-      color: #000;
-      padding: 10px 20px;
-      margin: 0 10px;
-      background-color: #f0f0f0;
-      border: 1px solid #000;
-      border-radius: 5px;
-      font-size: 18px;
-      display: flex;
-      align-items: center;
-    }
-    .nav-bar a:hover {
-      background-color: #ddd;
-    }
-    .nav-bar a.home-icon {
-      font-size: 24px; /* Tamaño del ícono de casa */
-    }
-
-    /* Estilos para las secciones */
-    .section {
-      display: none;
-      padding: 20px;
-      text-align: center;
-    }
-    .section.active {
-      display: block;
+      background-color: transparent;
     }
   </style>
 </head>
 <body>
-  <!-- Header con insignia, nombre del instituto y cuadro de texto -->
   <header>
     <div class="header-container">
-      <!-- Insignia: la imagen se encuentra en la carpeta "imagenes" -->
       <div class="logo">
         <img src="imagenes/insignia.png" alt="Insignia del Instituto">
       </div>
-      <!-- Nombre del instituto en dos líneas: "Instituto Regional" y "Federico Errazuriz" -->
       <div class="institute">
         <p>Instituto Regional</p>
         <p>Federico Errazuriz</p>
       </div>
-      <!-- Cuadro de texto con "Santa Cruz" y la fecha y hora actual -->
       <div class="header-info">
         <p>Santa Cruz</p>
         <p id="fecha-actual"></p>
-        <p id="hora-actual"></p>
       </div>
     </div>
   </header>
 
-  <!-- Título principal y barra de opciones -->
-  <h1 class="main-title">Actividades Clases de Física y Matemáticas</h1>
-  <div class="nav-bar">
-    <a href="#home" class="home-icon">🏠</a> <!-- Ícono de casa -->
-    <a href="#sobre-mi">Sobre Mi</a>
-    <a href="#guias">Guias</a>
-    <a href="#pruebas">Pruebas de Unidad</a>
-  </div>
-
-  <!-- Secciones -->
-  <div id="home" class="section active">
-    <!-- Home: Por el momento está en blanco -->
-  </div>
-
-  <div id="sobre-mi" class="section">
-    <h2>Sobre Mi</h2>
-    <p>Información sobre el profesor o la institución.</p>
-  </div>
-
-  <div id="guias" class="section">
-    <h2>Guias</h2>
-    <div class="pdf-container">
-      <ul>
-        <li>
-          <a href="pdfs/guia1.pdf" target="_blank" download>📥 Descargar Guía 1</a>
-          <br>
-          <embed src="pdfs/guia1.pdf" type="application/pdf" width="600" height="400">
-        </li>
-        <li>
-          <a href="pdfs/guia2.pdf" target="_blank" download>📥 Descargar Guía 2</a>
-          <br>
-          <embed src="pdfs/guia2.pdf" type="application/pdf" width="600" height="400">
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="pruebas" class="section">
-    <h2>Pruebas de Unidad</h2>
-    <p>Aquí se mostrarán las pruebas de unidad.</p>
-  </div>
-
   <script>
-    // Script para manejar la navegación entre secciones
-    document.querySelectorAll('.nav-bar a').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelectorAll('.section').forEach(section => {
-          section.classList.remove('active');
-        });
-        document.querySelector(this.getAttribute('href')).classList.add('active');
-      });
-    });
-
-    // Mostrar la sección de Home por defecto
-    document.querySelector('#home').classList.add('active');
-
-    // Función para mostrar la fecha y la hora actual con el formato solicitado
-    function mostrarFechaYHora() {
+    function mostrarFecha() {
       const fechaActual = new Date();
-      const dias = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
       const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
-      
       let dia = fechaActual.getDate();
       let mes = meses[fechaActual.getMonth()];
       let año = fechaActual.getFullYear();
-      
-      let fechaFormateada = `${dia} de ${mes} del ${año}`;
-
-      const opcionesHora = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
-      const horaFormateada = fechaActual.toLocaleTimeString('es-ES', opcionesHora);
-      
-      document.getElementById('fecha-actual').textContent = fechaFormateada;
-      document.getElementById('hora-actual').textContent = horaFormateada;
+      document.getElementById('fecha-actual').textContent = `${dia} de ${mes} del ${año}`;
     }
-
-    // Llamar a la función para mostrar la fecha y la hora al cargar la página
-    mostrarFechaYHora();
-    // Actualizar la hora cada segundo
-    setInterval(mostrarFechaYHora, 1000);
+    mostrarFecha();
   </script>
 </body>
 </html>
