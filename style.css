@@ -1,5 +1,12 @@
-/* Estilos del encabezado */
-.header-container {
+/* Reset básico para evitar márgenes y rellenos predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Contenedor general del encabezado */
+  .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -8,33 +15,111 @@
     border-bottom: 2px solid #ccc;
   }
   
-  /* Contenedor de la parte izquierda del encabezado */
+  /* Contenedor izquierdo del encabezado */
   .left-header {
     display: flex;
     align-items: center;
   }
   
-  /* Insignia del Instituto (agrandada) */
+  /* Ajuste de la insignia (imagen) */
   .logo img {
-    width: 80px; /* Tamaño ajustado para el encabezado */
+    width: 90px; /* Tamaño ajustado para que se vea mejor */
     height: auto;
     margin-right: 15px;
   }
   
-  /* Texto del Instituto alineado a la izquierda con separación de línea 1.15 */
+  /* Texto del Instituto alineado a la izquierda */
   .institute {
     font-size: 20px;
     font-weight: bold;
     color: #000;
-    line-height: 1.15; /* Separación de línea ajustada */
+    line-height: 1.15; /* Ajuste de separación entre líneas */
   }
   
-  /* Información a la derecha (Santa Cruz y fecha) con separación de línea 1.15 */
+  /* Contenedor derecho del encabezado */
   .header-info {
     text-align: right;
     font-size: 20px;
     font-weight: bold;
     color: #000;
-    line-height: 1.15; /* Separación de línea ajustada */
+    line-height: 1.15; /* Ajuste de separación entre líneas */
+  }
+  
+  /* Título principal centrado */
+  .main-title {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+  }
+  
+  /* Barra de navegación */
+  .nav-bar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .nav-bar a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  
+  .nav-bar a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Secciones */
+  .section {
+    display: none;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .section.active {
+    display: block;
+  }
+  
+  /* Estilos para la lista de guías */
+  .pdf-container ul {
+    list-style: none;
+  }
+  
+  .pdf-container li {
+    margin: 15px 0;
+  }
+  
+  .pdf-container a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .pdf-container a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .header-info {
+      margin-top: 10px;
+    }
+  
+    .nav-bar {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   
