@@ -1,26 +1,28 @@
-// Función para actualizar la fecha y hora en el encabezado
+// Función para actualizar fecha y hora
 function actualizarFechaHora() {
   const fechaActual = new Date();
+  
+  // Formateo de fecha
   const opcionesFecha = { day: 'numeric', month: 'long', year: 'numeric' };
-  const fechaFormateada = fechaActual.toLocaleDateString('es-ES', opcionesFecha);
-  document.getElementById('fecha-actual').textContent = fechaFormateada;
+  document.getElementById('fecha-actual').textContent = fechaActual.toLocaleDateString('es-ES', opcionesFecha);
 
-  const horaFormateada = fechaActual.toLocaleTimeString('es-ES');
-  document.getElementById('hora-actual').textContent = horaFormateada;
+  // Formateo de hora
+  const opcionesHora = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+  document.getElementById('hora-actual').textContent = fechaActual.toLocaleTimeString('es-ES', opcionesHora);
 }
 
-// Llamar a la función cuando cargue la página y cada segundo
-actualizarFechaHora();
+// Actualizar fecha y hora cada segundo
 setInterval(actualizarFechaHora, 1000);
+actualizarFechaHora();
 
-// Script para manejar la navegación entre secciones
-document.querySelectorAll('.nav-bar a').forEach(link => {
+// Manejo de navegación entre secciones
+document.querySelectorAll('.nav-button, .box ul li a').forEach(link => {
   link.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelectorAll('.section').forEach(section => {
-      section.classList.remove('active');
-    });
-    document.querySelector(this.getAttribute('href')).classList.add('active');
+      e.preventDefault();
+      document.querySelectorAll('.section').forEach(section => {
+          section.classList.remove('active');
+      });
+      document.querySelector(this.getAttribute('href')).classList.add('active');
   });
 });
 

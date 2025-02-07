@@ -1,4 +1,4 @@
-/* Reset básico para evitar márgenes y rellenos predeterminados */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   font-family: Arial, sans-serif;
 }
 
-/* Contenedor general del encabezado */
+/* Encabezado */
 .header-container {
   display: flex;
   align-items: center;
@@ -16,52 +16,43 @@
   border-bottom: 2px solid #ccc;
 }
 
-/* Contenedor izquierdo del encabezado */
 .left-header {
   display: flex;
   align-items: center;
 }
 
-/* Ajuste de la insignia (imagen) */
 .logo img {
   width: 90px;
   height: auto;
   margin-right: 15px;
 }
 
-/* Texto del Instituto alineado a la izquierda */
 .institute {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-  color: #000;
-  line-height: 1.15;
 }
 
-/* Contenedor derecho del encabezado */
 .header-info {
   text-align: right;
-  font-size: 20px;
-  font-weight: bold;
-  color: #000;
-  line-height: 1.15;
+  font-size: 18px;
 }
 
-/* Título principal centrado */
+/* Estilo general */
 .main-title {
   text-align: center;
   font-size: 24px;
   margin: 20px 0;
 }
 
-/* Barra de navegación */
-.nav-bar {
+/* Home Rediseñado */
+.home-container {
   display: flex;
   justify-content: center;
   gap: 15px;
   margin-bottom: 20px;
 }
 
-.nav-bar a {
+.home-button, .nav-button {
   text-decoration: none;
   color: #000;
   padding: 10px 20px;
@@ -71,8 +62,32 @@
   font-size: 18px;
 }
 
-.nav-bar a:hover {
+.content-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.box {
   background-color: #ddd;
+  padding: 20px;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.box h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.box ul {
+  list-style: none;
+}
+
+.box ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: blue;
 }
 
 /* Secciones */
@@ -86,40 +101,10 @@
   display: block;
 }
 
-/* Estilos para la lista de guías */
-.pdf-container ul {
-  list-style: none;
-}
-
-.pdf-container li {
-  margin: 15px 0;
-}
-
-.pdf-container a {
-  font-size: 18px;
-  text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
-}
-
-.pdf-container a:hover {
-  text-decoration: underline;
-}
-
-/* Ajustes responsivos */
+/* Responsivo */
 @media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .header-info {
-    margin-top: 10px;
-  }
-
-  .nav-bar {
-    flex-direction: column;
-    align-items: center;
+  .content-container {
+      flex-direction: column;
+      align-items: center;
   }
 }
