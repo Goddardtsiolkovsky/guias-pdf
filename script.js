@@ -1,22 +1,16 @@
-// Función para actualizar fecha y hora
-function actualizarFechaHora() {
+// Función para actualizar la fecha en el encabezado
+function actualizarFecha() {
   const fechaActual = new Date();
-  
-  // Formateo de fecha
-  const opcionesFecha = { day: 'numeric', month: 'long', year: 'numeric' };
-  document.getElementById('fecha-actual').textContent = fechaActual.toLocaleDateString('es-ES', opcionesFecha);
-
-  // Formateo de hora
-  const opcionesHora = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
-  document.getElementById('hora-actual').textContent = fechaActual.toLocaleTimeString('es-ES', opcionesHora);
+  const opciones = { day: 'numeric', month: 'long', year: 'numeric' };
+  const fechaFormateada = fechaActual.toLocaleDateString('es-ES', opciones);
+  document.getElementById('fecha-actual').textContent = fechaFormateada;
 }
 
-// Actualizar fecha y hora cada segundo
-setInterval(actualizarFechaHora, 1000);
-actualizarFechaHora();
+// Llamar a la función cuando cargue la página
+actualizarFecha();
 
 // Manejo de navegación entre secciones
-document.querySelectorAll('.nav-button, .box ul li a').forEach(link => {
+document.querySelectorAll('.nav-bar a').forEach(link => {
   link.addEventListener('click', function(e) {
       e.preventDefault();
       document.querySelectorAll('.section').forEach(section => {
