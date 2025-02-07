@@ -5,46 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Actividades Clases de Física y Matemáticas</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
 </head>
 <body>
 
   <!-- Encabezado -->
   <header>
     <div class="header-container">
-      <div class="institute">
+      <div class="logo">
         <img src="imagenes/insignia.png" alt="Insignia del Instituto">
-        <span>Instituto Regional Federico Errazuriz</span>
+      </div>
+      <div class="institute">
+        <p>Instituto Regional</p>
+        <p>Federico Errazuriz</p>
       </div>
       <div class="header-info">
-        <span>Santa Cruz - </span>
-        <span id="fecha-hora"></span>
+        <p>Santa Cruz</p>
+        <p id="fecha-actual"></p>
       </div>
     </div>
   </header>
 
-  <!-- Título Principal -->
   <h1 class="main-title">Actividades Clases de Física y Matemáticas</h1>
 
-  <!-- Barra de Navegación -->
-  <div class="nav-bar">
+  <!-- Barra de navegación -->
+  <nav class="nav-bar">
     <a href="#home" class="home-icon">🏠</a>
     <a href="#sobre-mi">Sobre Mi</a>
     <a href="#guias">Guías</a>
     <a href="#pruebas">Pruebas de Unidad</a>
-  </div>
+  </nav>
 
   <!-- Secciones -->
-  <div id="home" class="section active">
-    <h2>Bienvenido</h2>
-  </div>
+  <section id="home" class="section active"></section>
 
-  <div id="sobre-mi" class="section">
+  <section id="sobre-mi" class="section">
     <h2>Sobre Mi</h2>
     <p>Información sobre el profesor o la institución.</p>
-  </div>
+  </section>
 
-  <div id="guias" class="section">
+  <section id="guias" class="section">
     <h2>Guías</h2>
     <div class="pdf-container">
       <ul>
@@ -60,13 +59,13 @@
         </li>
       </ul>
     </div>
-  </div>
+  </section>
 
-  <div id="pruebas" class="section">
+  <section id="pruebas" class="section">
     <h2>Pruebas de Unidad</h2>
     <p>Aquí se mostrarán las pruebas de unidad.</p>
-  </div>
+  </section>
 
+  <script src="script.js"></script>
 </body>
 </html>
-
