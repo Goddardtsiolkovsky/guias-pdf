@@ -27,17 +27,16 @@
       margin: 0; /* Para que los textos queden bien alineados en líneas separadas */
     }
 
-    /* Estilos para el cuadro de texto en el encabezado */
+    /* Estilos para el cuadro de información en el encabezado */
     .header-info {
       margin-left: auto; /* Mueve el cuadro de texto a la derecha */
       text-align: right;
       font-family: 'Arial', sans-serif;
-      font-size: 18px; /* Tamaño de la tipografía proporcional */
+      font-size: 16px; /* Tamaño de la tipografía proporcional */
       color: #000;
-      padding: 10px;
-      background-color: #f0f0f0;
-      border: 1px solid #000;
-      border-radius: 5px;
+      padding: 5px;
+      line-height: 1; /* Reduce el espacio entre líneas */
+      background-color: transparent; /* Hace que el fondo sea transparente */
     }
 
     /* Estilos para la barra de opciones */
@@ -156,11 +155,18 @@
     // Mostrar la sección de Home por defecto
     document.querySelector('#home').classList.add('active');
 
-    // Función para mostrar la fecha y la hora actual
+    // Función para mostrar la fecha y la hora actual con el formato solicitado
     function mostrarFechaYHora() {
       const fechaActual = new Date();
-      const opcionesFecha = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-      const fechaFormateada = fechaActual.toLocaleDateString('es-ES', opcionesFecha);
+      const dias = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+      const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+      
+      let dia = fechaActual.getDate();
+      let mes = meses[fechaActual.getMonth()];
+      let año = fechaActual.getFullYear();
+      
+      let fechaFormateada = `${dia} de ${mes} del ${año}`;
+
       const opcionesHora = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
       const horaFormateada = fechaActual.toLocaleTimeString('es-ES', opcionesHora);
       
