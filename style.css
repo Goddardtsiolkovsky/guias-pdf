@@ -15,16 +15,22 @@ body {
     border-bottom: 2px solid #ccc;
   }
   
-  /* Insignia del Instituto */
+  /* Contenedor de la parte izquierda del encabezado */
+  .left-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Insignia del Instituto (agrandada) */
   .logo img {
-    width: 60px;
+    width: 80px; /* Tamaño ajustado para el encabezado */
     height: auto;
     margin-right: 15px;
   }
   
-  /* Texto del Instituto alineado */
+  /* Texto del Instituto alineado a la izquierda */
   .institute {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     line-height: 1.2;
     color: #000;
@@ -33,9 +39,17 @@ body {
   /* Información a la derecha (Santa Cruz y fecha) */
   .header-info {
     text-align: right;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     color: #000;
+  }
+  
+  /* Estilos para el título principal */
+  .main-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
   }
   
   /* Estilos para la barra de navegación */
