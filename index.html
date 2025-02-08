@@ -3,98 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividades Clases de Física y Matemáticas</title>
+    <title>Inicio - Clases de Física y Matemáticas</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-
-    <!-- Encabezado -->
     <header>
-        <div class="header-container">
-            <div class="left-header">
-                <div class="logo">
-                    <img src="imagenes/insignia.png" alt="Insignia del Instituto">
-                </div>
-                <div class="institute">
-                    <p>Instituto Regional</p>
-                    <p>Federico Errazuriz</p>
-                </div>
-            </div>
-            <div class="header-info">
-                <p>Santa Cruz</p>
-                <p id="fecha-hora"></p>
-            </div>
+        <div class="logo">
+            <img src="imagenes/insignia.png" alt="Insignia">
+        </div>
+        <div class="titulo">
+            <h1>Actividades Clases de Física y Matemáticas</h1>
+        </div>
+        <div class="fecha-hora">
+            <p>Santa Cruz</p>
+            <p id="fecha"></p>
+            <p id="hora"></p>
         </div>
     </header>
 
-    <h1 class="main-title">Actividades Clases de Física y Matemáticas</h1>
-
-    <!-- Nueva estructura del Home -->
-    <div class="home-container">
-        <div class="home-item">
-            <a href="#sobre-mi">Sobre Mi</a>
+    <main>
+        <div class="menu">
+            <div class="opcion">
+                <a href="index.html">🏠 <br> Home</a>
+            </div>
+            <div class="opcion">
+                <a href="sobre-mi.html">👤 <br> Sobre Mí</a>
+            </div>
+            <div class="opcion">
+                <a href="material-matematicas.html">📚 <br> Material Matemáticas</a>
+            </div>
+            <div class="opcion">
+                <a href="material-fisica.html">🔬 <br> Material Física</a>
+            </div>
         </div>
-        <div class="home-item">
-            <a href="#material-matematicas">Material Matemáticas</a>
-        </div>
-        <div class="home-item">
-            <a href="#material-fisica">Material Física</a>
-        </div>
-    </div>
-
-    <!-- Secciones -->
-    <section id="sobre-mi" class="section">
-        <h2>Sobre Mi</h2>
-        <p>Información sobre el profesor o la institución.</p>
-    </section>
-
-    <section id="material-matematicas" class="section">
-        <h2>Material Matemáticas</h2>
-        <ul>
-            <li><a href="#guias-matematicas">📂 Guías</a></li>
-            <li><a href="#pruebas-matematicas">📂 Pruebas de Unidad</a></li>
-        </ul>
-    </section>
-
-    <section id="guias-matematicas" class="section">
-        <h2>Guías de Matemáticas</h2>
-        <ul>
-            <li>
-                <a href="pdfs/guia1.pdf" target="_blank" download>📥 Descargar Guía 1</a>
-                <br>
-                <embed src="pdfs/guia1.pdf" type="application/pdf" width="600" height="400">
-            </li>
-            <li>
-                <a href="pdfs/guia2.pdf" target="_blank" download>📥 Descargar Guía 2</a>
-                <br>
-                <embed src="pdfs/guia2.pdf" type="application/pdf" width="600" height="400">
-            </li>
-        </ul>
-    </section>
-
-    <section id="pruebas-matematicas" class="section">
-        <h2>Pruebas de Unidad - Matemáticas</h2>
-        <p>Aquí se subirán las pruebas de matemáticas.</p>
-    </section>
-
-    <section id="material-fisica" class="section">
-        <h2>Material Física</h2>
-        <ul>
-            <li><a href="#guias-fisica">📂 Guías</a></li>
-            <li><a href="#pruebas-fisica">📂 Pruebas de Unidad</a></li>
-        </ul>
-    </section>
-
-    <section id="guias-fisica" class="section">
-        <h2>Guías de Física</h2>
-        <p>Aquí se subirán las guías de física.</p>
-    </section>
-
-    <section id="pruebas-fisica" class="section">
-        <h2>Pruebas de Unidad - Física</h2>
-        <p>Aquí se subirán las pruebas de física.</p>
-    </section>
-
-    <script src="script.js"></script>
+    </main>
 </body>
 </html>
