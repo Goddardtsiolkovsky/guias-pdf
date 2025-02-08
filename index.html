@@ -27,26 +27,108 @@
         <h1 class="titulo-principal">Actividades Clases de Física y Matemáticas</h1>
         <div class="menu">
             <div class="opcion">
-                <a href="index.html">🏠 <br> Home</a>
+                <a href="#home">🏠 <br> Home</a>
             </div>
             <div class="opcion">
-                <a href="sobre-mi.html">👤 <br> Sobre Mí</a>
+                <a href="#sobre-mi">👤 <br> Sobre Mí</a>
             </div>
             <div class="opcion">
-                <a href="material-matematicas.html">📚 <br> Material Matemáticas</a>
+                <p>📚 <br> Material Matemáticas</p>
                 <div class="subopciones">
-                    <a href="guias-matematicas.html">Guias</a>
-                    <a href="pruebas-matematicas.html">Pruebas</a>
+                    <a href="#guias-matematicas">Guías</a>
+                    <a href="#pruebas-matematicas">Pruebas</a>
                 </div>
             </div>
             <div class="opcion">
-                <a href="material-fisica.html">🔬 <br> Material Física</a>
+                <p>🔬 <br> Material Física</p>
                 <div class="subopciones">
-                    <a href="guias-fisica.html">Guias</a>
-                    <a href="pruebas-fisica.html">Pruebas</a>
+                    <a href="#guias-fisica">Guías</a>
+                    <a href="#pruebas-fisica">Pruebas</a>
                 </div>
             </div>
         </div>
+
+        <!-- Secciones -->
+        <section id="home" class="section active">
+            <h2>Bienvenido al sitio de Actividades</h2>
+            <p>Selecciona una opción del menú para ver el contenido.</p>
+        </section>
+
+        <section id="sobre-mi" class="section">
+            <h2>Sobre Mí</h2>
+            <p>Información sobre el profesor o la institución.</p>
+        </section>
+
+        <section id="guias-matematicas" class="section">
+            <h2>Guías de Matemáticas</h2>
+            <div class="pdf-container">
+                <ul>
+                    <li>
+                        <a href="pdfs/guia1.pdf" target="_blank" download>📥 Descargar Guía 1</a>
+                        <br>
+                        <embed src="pdfs/guia1.pdf" type="application/pdf" width="600" height="400">
+                    </li>
+                    <li>
+                        <a href="pdfs/guia2.pdf" target="_blank" download>📥 Descargar Guía 2</a>
+                        <br>
+                        <embed src="pdfs/guia2.pdf" type="application/pdf" width="600" height="400">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="pruebas-matematicas" class="section">
+            <h2>Pruebas de Matemáticas</h2>
+            <p>Contenido de las pruebas de Matemáticas.</p>
+        </section>
+
+        <section id="guias-fisica" class="section">
+            <h2>Guías de Física</h2>
+            <div class="pdf-container">
+                <ul>
+                    <li>
+                        <a href="pdfs/guia1.pdf" target="_blank" download>📥 Descargar Guía 1</a>
+                        <br>
+                        <embed src="pdfs/guia1.pdf" type="application/pdf" width="600" height="400">
+                    </li>
+                    <li>
+                        <a href="pdfs/guia2.pdf" target="_blank" download>📥 Descargar Guía 2</a>
+                        <br>
+                        <embed src="pdfs/guia2.pdf" type="application/pdf" width="600" height="400">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="pruebas-fisica" class="section">
+            <h2>Pruebas de Física</h2>
+            <p>Contenido de las pruebas de Física.</p>
+        </section>
     </main>
+
+    <script>
+        // Función para manejar la navegación entre secciones
+        function mostrarSeccion(seccionId) {
+            // Oculta todas las secciones
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Muestra la sección seleccionada
+            document.getElementById(seccionId).classList.add('active');
+        }
+
+        // Maneja los clics en los enlaces del menú
+        document.querySelectorAll('.menu a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // Evita el comportamiento predeterminado del enlace
+                const seccionId = this.getAttribute('href').substring(1); // Obtiene el ID de la sección
+                mostrarSeccion(seccionId); // Muestra la sección correspondiente
+            });
+        });
+
+        // Muestra la sección "home" por defecto al cargar la página
+        mostrarSeccion('home');
+    </script>
 </body>
 </html>
